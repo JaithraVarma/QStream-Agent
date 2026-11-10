@@ -30,8 +30,28 @@ A synthetic group-size sweep also showed the storage and error tradeoff. For nor
 ## Full-model inference and launch selection
 
 1. **Integrate into Qwen and establish the comparison.** The packed path replaces the SwiGLU projections in all 28 Qwen3-0.6B layers. Stock FP16 was faster in the original eager prefill and decode tests. For the packed model, switching from static-cache eager decode to CUDA Graph replay reduced the batch-1 step from **37.334 to 7.652 ms**. [Initial model timings](stage30/timing/REVIEW.md) · [Graph replay comparison](stage30/graph-decode/REVIEW.md)
-2. **Profile and tune batch-1 decode.** The down projection used **16 blocks for 30 SMs**. Changing the output tile from 64 to 32 doubled the grid and reduced decode latency by **5.2%** versus the original packed graph. Inco then evaluated Kimi as a launch-configuration selector. The winning proposal used 32 output features per block, a 64-wide reduction tile, four warps, and two stages. It reduced paired latency from **7.223 to 7.090 ms/token** versus the manual packed launch. The original search yielded one usable proposal in three attempts. Two higher-cap repeats returned the same slower configuration. [Down-projection profile](stage30/down-profile/REVIEW.md) · [Inco search](stage30/decode-search/REVIEW.md)
+2. **Profile and tune batch-1 decode.** The down projection used **16 blocks for 30 SMs**. Changing the output tile from 64 to 32 doubled the grid and reduced decode latency by **5.2%** versus the original packed graph. We then used Kimi through Inco to select among seven allowed launch configurations. [Down-projection profile](stage30/down-profile/REVIEW.md)
 3. **Confirm the result on new inputs.** The winner reduced latency by **1.63–1.90%** across held-out prompts of 64, 256, and 512 tokens versus manual INT4. In a same-session four-way test, adding a second stage made reduction width 32 **2.61% slower** and width 64 **1.11% faster**. The stock FP16 comparison at the top measures the resulting full-model tradeoff with both paths using CUDA Graphs. [Held-out checks](stage30/heldout/REVIEW.md) · [Matched precision and four-way checks](stage30/final-checks/REVIEW.md)
+
+## Inco experiments
+
+### API metrics
+
+Inco served Kimi K3.1 Pro Standard for the full-model launch search. The table covers the three completed API calls in the original search and the two higher-cap repeats. Cached tokens are part of the input total. Completion tokens per second is the provider-reported completion count, including reasoning, divided by client wall time, which includes request overhead.
+
+| Request | Client wall time | Input tokens (cached) | Completion tokens | Completion tokens/s | Outcome |
+| --- | ---: | ---: | ---: | ---: | --- |
+| Original round 1 | 27.26 s | 958 (0) | 5,260 | 192.94 | Usable proposal |
+| Original round 2 | 44.86 s | 1,088 (512) | 8,192 | 182.60 | Token cap reached, empty answer |
+| Original round 3 | 43.28 s | 1,108 (512) | 8,192 | 189.29 | Token cap reached, empty answer |
+| Round 2 repeat | 15.47 s | 1,088 (1,024) | 3,279 | 211.91 | Usable proposal |
+| Round 3 repeat | 34.00 s | 1,108 (1,024) | 6,363 | 187.16 | Usable proposal |
+
+The original search yielded one usable proposal in three calls. Both repeats returned usable replies under a 16,384-token cap, and both finished within the original 8,192-token budget. With one repeat per prompt and different cache usage, these observations leave the effect of the higher cap open. [API receipts and search history](stage30/decode-search/REVIEW.md)
+
+### GPU results
+
+The first proposal used 32 outputs per block, a 64-wide reduction tile, four warps, and two pipeline stages. It passed the local correctness checks and reduced paired Qwen decode latency from **7.223 to 7.090 ms/token**, a **1.81%** improvement over the manual INT4 launch. It won all 30 paired trials at held-out prompt lengths. Both higher-cap repeats proposed the same alternative, which was about **2.6% slower** than the manual launch in two GPU sessions. This full-model search evaluated Kimi's proposals against the manual kernel. A matched search without feedback would be needed to measure the effect of feedback on proposal quality. [Winning GPU receipt](stage30/decode-search/round-1-retry/evaluation.json) · [Held-out results](stage30/heldout/REVIEW.md)
 
 ## Set up and run
 
