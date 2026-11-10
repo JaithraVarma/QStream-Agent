@@ -1,0 +1,124 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "seed": 42,
+  "results": [
+    {
+      "shape": [
+        1,
+        1024,
+        2048
+      ],
+      "measurements": {
+        "fp16_sequential": {
+          "median_ms": 0.08511999994516373,
+          "p10_ms": 0.07884799689054489,
+          "p90_ms": 0.11670400202274323,
+          "samples": 50
+        },
+        "fp16_two_stream": {
+          "median_ms": 0.15052799880504608,
+          "p10_ms": 0.14009599387645721,
+          "p90_ms": 0.1740799993276596,
+          "samples": 50
+        },
+        "int4_reconstructed_sequential": {
+          "median_ms": 0.08601599931716919,
+          "p10_ms": 0.08089599758386612,
+          "p90_ms": 0.11161600053310394,
+          "samples": 50
+        },
+        "int4_reconstructed_two_stream": {
+          "median_ms": 0.1443839967250824,
+          "p10_ms": 0.14025600254535675,
+          "p90_ms": 0.20265600085258484,
+          "samples": 50
+        },
+        "int4_reconstruct_each_call": {
+          "median_ms": 1.0598399639129639,
+          "p10_ms": 1.0567359924316406,
+          "p90_ms": 1.1161600351333618,
+          "samples": 50
+        }
+      }
+    },
+    {
+      "shape": [
+        16,
+        1024,
+        2048
+      ],
+      "measurements": {
+        "fp16_sequential": {
+          "median_ms": 0.1024319976568222,
+          "p10_ms": 0.08396799862384796,
+          "p90_ms": 0.14131200313568115,
+          "samples": 50
+        },
+        "fp16_two_stream": {
+          "median_ms": 0.1515520066022873,
+          "p10_ms": 0.1372160017490387,
+          "p90_ms": 0.20979200303554535,
+          "samples": 50
+        },
+        "int4_reconstructed_sequential": {
+          "median_ms": 0.08294399827718735,
+          "p10_ms": 0.08089599758386612,
+          "p90_ms": 0.09318400174379349,
+          "samples": 50
+        },
+        "int4_reconstructed_two_stream": {
+          "median_ms": 0.14662399888038635,
+          "p10_ms": 0.14028799533843994,
+          "p90_ms": 0.29280000925064087,
+          "samples": 50
+        },
+        "int4_reconstruct_each_call": {
+          "median_ms": 1.0598399639129639,
+          "p10_ms": 1.0301439762115479,
+          "p90_ms": 1.094655990600586,
+          "samples": 50
+        }
+      }
+    },
+    {
+      "shape": [
+        128,
+        1024,
+        2048
+      ],
+      "measurements": {
+        "fp16_sequential": {
+          "median_ms": 0.14028799533843994,
+          "p10_ms": 0.130048006772995,
+          "p90_ms": 0.22323200106620789,
+          "samples": 50
+        },
+        "fp16_two_stream": {
+          "median_ms": 0.17919999361038208,
+          "p10_ms": 0.17401599884033203,
+          "p90_ms": 0.23654399812221527,
+          "samples": 50
+        },
+        "int4_reconstructed_sequential": {
+          "median_ms": 0.14000000059604645,
+          "p10_ms": 0.13097600638866425,
+          "p90_ms": 0.159743994474411,
+          "samples": 50
+        },
+        "int4_reconstructed_two_stream": {
+          "median_ms": 0.19459199905395508,
+          "p10_ms": 0.18534399569034576,
+          "p90_ms": 0.25088000297546387,
+          "samples": 50
+        },
+        "int4_reconstruct_each_call": {
+          "median_ms": 1.1192320585250854,
+          "p10_ms": 1.1008000373840332,
+          "p90_ms": 1.2380160093307495,
+          "samples": 50
+        }
+      }
+    }
+  ],
+  "interpretation": "Reconstructed cases execute FP16 GEMMs; no native INT4 acceleration claim."
+}

@@ -1,0 +1,37 @@
+{
+  "status": "UNAVAILABLE",
+  "total_gpu_kernels": 0,
+  "variants": [
+    {
+      "variant": "fp16_sequential",
+      "kernels": 0,
+      "streams": {},
+      "overlaps": []
+    },
+    {
+      "variant": "fp16_two_stream",
+      "kernels": 0,
+      "streams": {},
+      "overlaps": []
+    },
+    {
+      "variant": "int4_reconstructed_sequential",
+      "kernels": 0,
+      "streams": {},
+      "overlaps": []
+    },
+    {
+      "variant": "int4_reconstructed_two_stream",
+      "kernels": 0,
+      "streams": {},
+      "overlaps": []
+    },
+    {
+      "variant": "int4_reconstruct_each_call",
+      "kernels": 0,
+      "streams": {},
+      "overlaps": []
+    }
+  ],
+  "limitation": "Single trace at batch 128; absence of overlap does not establish a hardware bottleneck."
+}

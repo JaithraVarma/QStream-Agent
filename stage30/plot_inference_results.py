@@ -71,7 +71,7 @@ def main():
     fig.text(.055, .028, "RTX 3060 Laptop GPU • batch 1 • 16 cached decode steps per trial. "
              "Panel B measures each model separately after graph capture.", fontsize=9, color="#475569")
     fig.subplots_adjust(left=.065, right=.97, top=.82, bottom=.22, wspace=.43)
-    fig.savefig(OUT / "checkpoint3.png", dpi=180, facecolor="white")
+    fig.savefig(OUT / "inference-results.png", dpi=180, facecolor="white")
     plt.close(fig)
 
 

@@ -13,7 +13,7 @@ The four-way check varies the reduction width and pipeline stage count while hol
 ```bash
 env -u INCO_API_KEY .venv/bin/python -B -m stage30.final_checks factorial --output stage30/final-checks/factorial-local.json
 .venv/bin/python -m pip install matplotlib
-.venv/bin/python -B -m stage30.plot_checkpoint3
+.venv/bin/python -B -m stage30.plot_inference_results
 ```
 
 The offline Inco preview reconstructs the final prompt from the included history without calling the provider.

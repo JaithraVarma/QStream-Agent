@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "selection": {
+    "code-only": "parent",
+    "gpu-feedback": "gpu-feedback"
+  },
+  "geomean_speedups": {
+    "graph": [
+      1.1290228259360158,
+      1.1484743168330034
+    ],
+    "eager": [
+      1.062807859806487,
+      1.069626992324804
+    ]
+  },
+  "source_hashes": {
+    "parent": "298158ad00e88e669f4970f3f38e3b34f789e304eaba00136de418a7a0b6d228",
+    "gpu-feedback": "0224e9ebf7079b76b5e0bb86e8e15333d2abf097e35a87fd4d221d5bc4df7607"
+  },
+  "development_summary_sha256": "78b720451b62a5c47b568e75ea305dd1e4583636ef7b1945a4afa9e734314c13",
+  "raw_hashes": {
+    "run1.json": "6e24be6e95cfcba405f1c27d8696b9bbe52a81174d8248199f349733957f0529",
+    "run2.json": "883c464aaa538762b2c4ad193e28ecaef4630fb894fafad85948c6a8cbe6947c"
+  }
+}

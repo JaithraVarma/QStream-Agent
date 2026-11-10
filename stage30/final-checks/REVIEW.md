@@ -2,7 +2,7 @@
 
 ## Stock FP16 and selected packed INT4
 
-The comparison uses batch 1, prompt lengths 128 and 512, and 16 fixed cached decode steps per trial on the RTX 3060 Laptop GPU. Both modes use the same pinned Qwen3-0.6B checkpoint, token IDs, static KV cache design, attention backend, and graph replay timing procedure. The INT4 graph uses the validated Kimi launch for the single-row down projections. Each graph must match its own static-cache eager result before timing. Cross-precision logit comparisons are descriptive because the models use different weight representations.
+The comparison uses batch 1, prompt lengths 128 and 512, and 16 fixed cached decode steps per trial on the RTX 3060 Laptop GPU. Both modes use the same pinned Qwen3-0.6B weights revision, token IDs, static KV cache design, attention backend, and graph replay timing procedure. The INT4 graph uses the validated Kimi launch for the single-row down projections. Each graph must match its own static-cache eager result before timing. Cross-precision logit comparisons are descriptive because the models use different weight representations.
 
 Ten same-session latency pairs at each context use five trials in each execution order. The GPU event and wall interval includes token and position staging and decode replay. Prefill and graph capture are outside that interval. Both models are resident during the paired latency trials. Peak allocated memory is measured separately with one model resident at a time, after graph capture. It includes model storage, the static cache, captured graph allocations, and the peak during one prefill plus 16 replays. Model loading, INT4 conversion, graph capture itself, and allocator reservations are outside the reported peak.
 
