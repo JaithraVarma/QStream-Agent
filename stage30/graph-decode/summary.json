@@ -1,0 +1,698 @@
+{
+  "status": "PASS",
+  "batch": 1,
+  "prompt_tokens": 128,
+  "pairs": 10,
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "telemetry": [
+    {
+      "label": "start",
+      "utc": "2026-11-09T20:59:51.322326+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 53, P0, 1702 MHz, 7001 MHz, 17.17 W, 1269 MiB, 41 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "end",
+      "utc": "2026-11-09T21:00:15.828130+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 60, P0, 1987 MHz, 7001 MHz, 54.21 W, 1435 MiB, 73 %\n",
+      "stderr": ""
+    }
+  ],
+  "kernel_sha256": "72932d07630869416d679b8d591db526dfc0fb7df3e921d8665f99ef52caa6d1",
+  "quantized_sha256": "4bc3aae51d883b3402fe789ac778c139a6f3a2ded05e93a7e0508bc108cec191",
+  "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+  "decode_steps": 16,
+  "cache_capacity": 144,
+  "correctness": [
+    {
+      "input": "benchmark",
+      "step": 0,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.0029006730765104294,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 1,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.025390625,
+        "relative_l2": 0.002149285050109029,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 2,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.0023998157121241093,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 3,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0017680581659078598,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 4,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.03125,
+        "relative_l2": 0.0022118014749139547,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 5,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0263671875,
+        "relative_l2": 0.0024085629265755415,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 6,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.01953125,
+        "relative_l2": 0.0012573449639603496,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 7,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0016361473826691508,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 8,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0017831884324550629,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 9,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.001693470636382699,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 10,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0023260184098035097,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 11,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.03125,
+        "relative_l2": 0.0019518568878993392,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 12,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.03125,
+        "relative_l2": 0.0019337208941578865,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 13,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.00224744132719934,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 14,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.025390625,
+        "relative_l2": 0.0022266206797212362,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 15,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.025390625,
+        "relative_l2": 0.0028088707476854324,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "benchmark",
+      "step": 16,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0016349327052012086,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 0,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.0022737947292625904,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 1,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.01953125,
+        "relative_l2": 0.002143187914043665,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 2,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.0020317670423537493,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 3,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.002617675345391035,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 4,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.001901466865092516,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 5,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0017709089443087578,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 6,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.002056701807305217,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 7,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.025390625,
+        "relative_l2": 0.0016706341411918402,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 8,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.01953125,
+        "relative_l2": 0.002120647579431534,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 9,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.021484375,
+        "relative_l2": 0.0014297021552920341,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 10,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.002651915419846773,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 11,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0015128207160159945,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 12,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0016480862395837903,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 13,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.021484375,
+        "relative_l2": 0.002409256063401699,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 14,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.0234375,
+        "relative_l2": 0.0025096903555095196,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 15,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.02734375,
+        "relative_l2": 0.0028793977107852697,
+        "top1_match": true
+      }
+    },
+    {
+      "input": "alternate",
+      "step": 16,
+      "graph_vs_eager": {
+        "max_abs": 0.0,
+        "relative_l2": 0.0,
+        "top1_match": true
+      },
+      "graph_vs_dynamic": {
+        "max_abs": 0.01953125,
+        "relative_l2": 0.001815754803828895,
+        "top1_match": true
+      }
+    }
+  ],
+  "memory_before_capture": {
+    "allocated_bytes": 840583680,
+    "peak_allocated_bytes": 1233828352,
+    "peak_reserved_bytes": 1308622848
+  },
+  "memory_after_capture": {
+    "allocated_bytes": 849408512,
+    "peak_allocated_bytes": 1233828352,
+    "peak_reserved_bytes": 1308622848
+  },
+  "samples": [
+    {
+      "order": [
+        "graph",
+        "eager"
+      ],
+      "samples": {
+        "graph": {
+          "event_ms": 122.38642883300781,
+          "wall_ms": 122.490599999999
+        },
+        "eager": {
+          "event_ms": 585.87646484375,
+          "wall_ms": 585.9375729999954
+        }
+      }
+    },
+    {
+      "order": [
+        "graph",
+        "eager"
+      ],
+      "samples": {
+        "graph": {
+          "event_ms": 122.31986999511719,
+          "wall_ms": 122.43586900000025
+        },
+        "eager": {
+          "event_ms": 658.2341918945312,
+          "wall_ms": 658.3230080000035
+        }
+      }
+    },
+    {
+      "order": [
+        "eager",
+        "graph"
+      ],
+      "samples": {
+        "eager": {
+          "event_ms": 622.9942626953125,
+          "wall_ms": 623.0999019999928
+        },
+        "graph": {
+          "event_ms": 122.5195541381836,
+          "wall_ms": 122.66039200000023
+        }
+      }
+    },
+    {
+      "order": [
+        "eager",
+        "graph"
+      ],
+      "samples": {
+        "eager": {
+          "event_ms": 611.38330078125,
+          "wall_ms": 611.4902360000087
+        },
+        "graph": {
+          "event_ms": 122.4632339477539,
+          "wall_ms": 122.56469000000436
+        }
+      }
+    },
+    {
+      "order": [
+        "graph",
+        "eager"
+      ],
+      "samples": {
+        "graph": {
+          "event_ms": 122.2266845703125,
+          "wall_ms": 122.34886299999914
+        },
+        "eager": {
+          "event_ms": 611.7437744140625,
+          "wall_ms": 611.8443919999947
+        }
+      }
+    },
+    {
+      "order": [
+        "eager",
+        "graph"
+      ],
+      "samples": {
+        "eager": {
+          "event_ms": 577.0844116210938,
+          "wall_ms": 577.1977349999986
+        },
+        "graph": {
+          "event_ms": 122.27993774414062,
+          "wall_ms": 122.43623999999897
+        }
+      }
+    },
+    {
+      "order": [
+        "eager",
+        "graph"
+      ],
+      "samples": {
+        "eager": {
+          "event_ms": 605.2515869140625,
+          "wall_ms": 605.3287680000068
+        },
+        "graph": {
+          "event_ms": 122.36083221435547,
+          "wall_ms": 122.43879800000457
+        }
+      }
+    },
+    {
+      "order": [
+        "graph",
+        "eager"
+      ],
+      "samples": {
+        "graph": {
+          "event_ms": 122.32806396484375,
+          "wall_ms": 122.45668799999976
+        },
+        "eager": {
+          "event_ms": 589.275146484375,
+          "wall_ms": 589.3673749999948
+        }
+      }
+    },
+    {
+      "order": [
+        "graph",
+        "eager"
+      ],
+      "samples": {
+        "graph": {
+          "event_ms": 122.2471694946289,
+          "wall_ms": 122.41853300000116
+        },
+        "eager": {
+          "event_ms": 586.6229858398438,
+          "wall_ms": 586.7169970000106
+        }
+      }
+    },
+    {
+      "order": [
+        "eager",
+        "graph"
+      ],
+      "samples": {
+        "eager": {
+          "event_ms": 585.7372436523438,
+          "wall_ms": 585.8690240000044
+        },
+        "graph": {
+          "event_ms": 122.30143737792969,
+          "wall_ms": 122.42293999999276
+        }
+      }
+    }
+  ],
+  "medians_ms_per_step": {
+    "eager": {
+      "event_ms": 37.32896041870117,
+      "wall_ms": 37.334254468750046
+    },
+    "graph": {
+      "event_ms": 7.645247936248779,
+      "wall_ms": 7.652344937500111
+    }
+  }
+}

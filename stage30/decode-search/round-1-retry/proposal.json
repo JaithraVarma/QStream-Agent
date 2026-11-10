@@ -1,0 +1,4 @@
+{
+  "config_id": "n32-k64-w4-s2",
+  "hypothesis": "Manual's 32 blocks gave a measured 5.52% win; K64 then won 10/10 pairs but only by 0.68%, with 51 registers and logit drift. Keeping that grid, two stages may overlap loads with dequant/dot to reduce stalls. Tradeoff: more shared memory and possible register pressure, while retaining K64's numeric-drift risk."
+}

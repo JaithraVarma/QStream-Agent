@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "source_sha256": "72932d07630869416d679b8d591db526dfc0fb7df3e921d8665f99ef52caa6d1",
+  "predecessors": {
+    "two-scale": "0224e9ebf7079b76b5e0bb86e8e15333d2abf097e35a87fd4d221d5bc4df7607",
+    "decode-only": "1255e9dea6bde82c335d2369e2ddd12424e0bbcdc88b27c5a1c844979c6c8a55"
+  },
+  "offset_cases": [
+    {
+      "shape": [
+        17,
+        65,
+        1024,
+        128
+      ],
+      "storage_offset_elements": 1,
+      "max_abs": 0.0009765625
+    },
+    {
+      "shape": [
+        17,
+        65,
+        1008,
+        48
+      ],
+      "storage_offset_elements": 1,
+      "max_abs": 0.001953125
+    },
+    {
+      "shape": [
+        3,
+        67,
+        50,
+        50
+      ],
+      "storage_offset_elements": 1,
+      "max_abs": 0.0
+    },
+    {
+      "shape": [
+        5,
+        63,
+        132,
+        66
+      ],
+      "storage_offset_elements": 1,
+      "max_abs": 0.0
+    },
+    {
+      "shape": [
+        1,
+        33,
+        70,
+        10
+      ],
+      "storage_offset_elements": 1,
+      "max_abs": 0.0
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "layer": 0,
+  "decode_position": 128,
+  "cache_capacity": 144,
+  "shape": [
+    1,
+    1024,
+    3072,
+    128
+  ],
+  "kernel_sha256": "72932d07630869416d679b8d591db526dfc0fb7df3e921d8665f99ef52caa6d1",
+  "quantized_sha256": "4bc3aae51d883b3402fe789ac778c139a6f3a2ded05e93a7e0508bc108cec191",
+  "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+  "activation_sha256": "2da3b58e515fb0ea75df3fb816fc5f84df949fb373242221159d86e39ae5f95c",
+  "max_abs_error": 0.0001220703125,
+  "atol": 0.005,
+  "rtol": 0.005,
+  "warmup_launches": 50,
+  "registers": 48,
+  "spills": 0,
+  "shared_bytes": 2048
+}

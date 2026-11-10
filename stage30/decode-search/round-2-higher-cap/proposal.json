@@ -1,0 +1,4 @@
+{
+  "config_id": "n32-k32-w4-s2",
+  "hypothesis": "N32/K32 gave 1.0552x (10/10). At K64, s2 gave 1.0184x versus 1.0068x for s1, suggesting pipelining helps. Keeping 32 blocks and K32 arithmetic, s2 may hide load latency; extra shared memory or register pressure could hurt occupancy, so replay speed remains untested."
+}

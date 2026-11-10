@@ -1,0 +1,4 @@
+{
+  "config_id": "n32-k32-w4-s2",
+  "hypothesis": "K64/S1 and K64/S2 gained 0.68% and 1.84% over manual in their paired runs; with high L2 hits and warp stalls, this supports testing prefetch. K32/S2 keeps 32 blocks and baseline reduction order, and may overlap L2 loads with dot; extra shared memory/registers could hurt occupancy, so gains are unproven."
+}

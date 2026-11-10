@@ -1,0 +1,9 @@
+.venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+stage30/.*/
+stage30/model-receipt.json
+stage30/final-checks/demo.*/
+*.log

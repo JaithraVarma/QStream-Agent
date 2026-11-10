@@ -1,0 +1,15 @@
+{
+  "status": "accepted",
+  "request_id": "061d194d-5440-4969-960f-3153fa94a528",
+  "client_seconds": 33.997596564999185,
+  "usage": {
+    "prompt_tokens": 1108,
+    "completion_tokens": 6363,
+    "total_tokens": 7471,
+    "prompt_tokens_details": {
+      "cached_tokens": 1024
+    }
+  },
+  "finish_reason": "stop",
+  "completion_tokens_per_client_second": 187.16028904674874
+}

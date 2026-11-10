@@ -1,0 +1,785 @@
+{
+  "variant": "packed",
+  "model": "Qwen/Qwen3-0.6B",
+  "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+  "backend": "sdpa",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "torch": "2.9.1+cu130",
+  "all_layer_gate_sha256": "37a32518cbce608274ddd1bb08762e0848048f5385c1119abdcc2eec56c4ac55",
+  "rounds": 5,
+  "trials_per_round": 3,
+  "decode_steps": 16,
+  "cases": [
+    {
+      "batch": 1,
+      "prompt_tokens": 128,
+      "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 37.645790100097656,
+            "prefill_wall_ms": 37.72795899999437,
+            "decode_event_ms": 563.2952270507812,
+            "decode_wall_ms": 516.413741000008
+          },
+          {
+            "prefill_event_ms": 36.06937789916992,
+            "prefill_wall_ms": 33.129862999999204,
+            "decode_event_ms": 598.9058837890625,
+            "decode_wall_ms": 549.0646679999998
+          },
+          {
+            "prefill_event_ms": 39.432193756103516,
+            "prefill_wall_ms": 36.223438999996915,
+            "decode_event_ms": 553.218017578125,
+            "decode_wall_ms": 507.1704640000121
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 33.59231948852539,
+            "prefill_wall_ms": 30.841701999975157,
+            "decode_event_ms": 571.4142456054688,
+            "decode_wall_ms": 523.8419559999841
+          },
+          {
+            "prefill_event_ms": 45.07209777832031,
+            "prefill_wall_ms": 41.401495999991766,
+            "decode_event_ms": 633.7321166992188,
+            "decode_wall_ms": 581.0146249999946
+          },
+          {
+            "prefill_event_ms": 43.69305419921875,
+            "prefill_wall_ms": 40.10054400001195,
+            "decode_event_ms": 596.4656372070312,
+            "decode_wall_ms": 546.830301
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 34.610015869140625,
+            "prefill_wall_ms": 31.76859499998841,
+            "decode_event_ms": 561.8247680664062,
+            "decode_wall_ms": 515.084145000003
+          },
+          {
+            "prefill_event_ms": 40.30259323120117,
+            "prefill_wall_ms": 37.000601000016786,
+            "decode_event_ms": 575.8648071289062,
+            "decode_wall_ms": 527.9496750000021
+          },
+          {
+            "prefill_event_ms": 39.73836898803711,
+            "prefill_wall_ms": 36.47728100000336,
+            "decode_event_ms": 575.5012817382812,
+            "decode_wall_ms": 527.645863999993
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 35.511295318603516,
+            "prefill_wall_ms": 32.65182300000902,
+            "decode_event_ms": 553.9542846679688,
+            "decode_wall_ms": 507.8850579999994
+          },
+          {
+            "prefill_event_ms": 36.985633850097656,
+            "prefill_wall_ms": 34.19405500000039,
+            "decode_event_ms": 554.8493041992188,
+            "decode_wall_ms": 508.7155800000005
+          },
+          {
+            "prefill_event_ms": 37.23155212402344,
+            "prefill_wall_ms": 34.205781999986584,
+            "decode_event_ms": 549.9614868164062,
+            "decode_wall_ms": 504.2352680000022
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 36.72166442871094,
+            "prefill_wall_ms": 33.69971099999702,
+            "decode_event_ms": 570.9906005859375,
+            "decode_wall_ms": 523.4391679999817
+          },
+          {
+            "prefill_event_ms": 35.44780731201172,
+            "prefill_wall_ms": 32.5477439999986,
+            "decode_event_ms": 563.19384765625,
+            "decode_wall_ms": 516.5595830000029
+          },
+          {
+            "prefill_event_ms": 38.246177673339844,
+            "prefill_wall_ms": 38.306359000017665,
+            "decode_event_ms": 563.24609375,
+            "decode_wall_ms": 545.7644390000098
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815546368,
+        "peak_allocated_bytes": 833700864,
+        "peak_reserved_bytes": 1256194048
+      }
+    },
+    {
+      "batch": 1,
+      "prompt_tokens": 512,
+      "input_sha256": "4a611661fe868e771680ec47f0ef29a8c3ab4d04bb4206185a657de7f6687298",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 50.17027282714844,
+            "prefill_wall_ms": 48.073945999988155,
+            "decode_event_ms": 562.4053955078125,
+            "decode_wall_ms": 538.3537550000028
+          },
+          {
+            "prefill_event_ms": 50.535423278808594,
+            "prefill_wall_ms": 48.42319699997688,
+            "decode_event_ms": 562.6234741210938,
+            "decode_wall_ms": 538.4266579999917
+          },
+          {
+            "prefill_event_ms": 51.36383819580078,
+            "prefill_wall_ms": 49.22178600000393,
+            "decode_event_ms": 571.2291259765625,
+            "decode_wall_ms": 546.8453299999965
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 51.87993621826172,
+            "prefill_wall_ms": 49.73685299998465,
+            "decode_event_ms": 594.6387939453125,
+            "decode_wall_ms": 569.1515590000051
+          },
+          {
+            "prefill_event_ms": 50.21593475341797,
+            "prefill_wall_ms": 48.126648999982535,
+            "decode_event_ms": 563.2368774414062,
+            "decode_wall_ms": 539.012745000008
+          },
+          {
+            "prefill_event_ms": 50.78732681274414,
+            "prefill_wall_ms": 48.67807099998345,
+            "decode_event_ms": 566.390625,
+            "decode_wall_ms": 542.0360640000013
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 50.63167953491211,
+            "prefill_wall_ms": 48.528303000011874,
+            "decode_event_ms": 564.8411254882812,
+            "decode_wall_ms": 540.5642139999998
+          },
+          {
+            "prefill_event_ms": 52.10316848754883,
+            "prefill_wall_ms": 49.94113800000832,
+            "decode_event_ms": 574.1074829101562,
+            "decode_wall_ms": 549.4233679999923
+          },
+          {
+            "prefill_event_ms": 50.88451385498047,
+            "prefill_wall_ms": 48.73413400000004,
+            "decode_event_ms": 605.348876953125,
+            "decode_wall_ms": 585.5743480000228
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 50.80575942993164,
+            "prefill_wall_ms": 50.90483000000745,
+            "decode_event_ms": 603.7135620117188,
+            "decode_wall_ms": 603.8799039999958
+          },
+          {
+            "prefill_event_ms": 56.220672607421875,
+            "prefill_wall_ms": 56.371030000008204,
+            "decode_event_ms": 807.1106567382812,
+            "decode_wall_ms": 807.2918890000267
+          },
+          {
+            "prefill_event_ms": 51.04230499267578,
+            "prefill_wall_ms": 51.12944300000777,
+            "decode_event_ms": 586.8306274414062,
+            "decode_wall_ms": 586.9518940000091
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 52.26793670654297,
+            "prefill_wall_ms": 52.374660999987555,
+            "decode_event_ms": 676.337646484375,
+            "decode_wall_ms": 676.5385520000109
+          },
+          {
+            "prefill_event_ms": 50.75961685180664,
+            "prefill_wall_ms": 50.85088900000301,
+            "decode_event_ms": 686.698486328125,
+            "decode_wall_ms": 686.8811429999937
+          },
+          {
+            "prefill_event_ms": 51.17747116088867,
+            "prefill_wall_ms": 51.269237000013845,
+            "decode_event_ms": 598.2382202148438,
+            "decode_wall_ms": 598.4197270000209
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815549440,
+        "peak_allocated_bytes": 897992192,
+        "peak_reserved_bytes": 1302331392
+      }
+    },
+    {
+      "batch": 1,
+      "prompt_tokens": 32,
+      "input_sha256": "3e0db87ddfdb25ee2e82c818573d5146626a4550f4102b95dffe6ca6f2e28625",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 37.21744155883789,
+            "prefill_wall_ms": 37.28590200000781,
+            "decode_event_ms": 592.6041870117188,
+            "decode_wall_ms": 592.693631000003
+          },
+          {
+            "prefill_event_ms": 37.63302230834961,
+            "prefill_wall_ms": 37.7088979999769,
+            "decode_event_ms": 643.4016723632812,
+            "decode_wall_ms": 643.4922649999919
+          },
+          {
+            "prefill_event_ms": 56.61491012573242,
+            "prefill_wall_ms": 56.690408000008574,
+            "decode_event_ms": 812.2869873046875,
+            "decode_wall_ms": 812.3714510000184
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 38.98051071166992,
+            "prefill_wall_ms": 39.116704999997864,
+            "decode_event_ms": 543.5965576171875,
+            "decode_wall_ms": 543.6605289999932
+          },
+          {
+            "prefill_event_ms": 33.81862258911133,
+            "prefill_wall_ms": 33.892655999977706,
+            "decode_event_ms": 614.4153442382812,
+            "decode_wall_ms": 614.4612999999879
+          },
+          {
+            "prefill_event_ms": 35.09247970581055,
+            "prefill_wall_ms": 35.15737100002525,
+            "decode_event_ms": 584.82275390625,
+            "decode_wall_ms": 584.8713470000177
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 34.45043182373047,
+            "prefill_wall_ms": 34.56751699999927,
+            "decode_event_ms": 563.0986328125,
+            "decode_wall_ms": 563.163161999995
+          },
+          {
+            "prefill_event_ms": 37.9944953918457,
+            "prefill_wall_ms": 38.079751999987366,
+            "decode_event_ms": 551.3922729492188,
+            "decode_wall_ms": 551.415507999991
+          },
+          {
+            "prefill_event_ms": 36.06118392944336,
+            "prefill_wall_ms": 36.1362980000024,
+            "decode_event_ms": 545.3660278320312,
+            "decode_wall_ms": 545.390851999997
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 34.293697357177734,
+            "prefill_wall_ms": 34.37119900002017,
+            "decode_event_ms": 546.376708984375,
+            "decode_wall_ms": 546.4171030000102
+          },
+          {
+            "prefill_event_ms": 34.90099334716797,
+            "prefill_wall_ms": 34.985112000015306,
+            "decode_event_ms": 577.8472900390625,
+            "decode_wall_ms": 577.9062299999964
+          },
+          {
+            "prefill_event_ms": 37.742591857910156,
+            "prefill_wall_ms": 37.80902399998354,
+            "decode_event_ms": 587.60498046875,
+            "decode_wall_ms": 587.6507460000084
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 35.21331024169922,
+            "prefill_wall_ms": 35.29049799999484,
+            "decode_event_ms": 553.7413330078125,
+            "decode_wall_ms": 553.8431410000157
+          },
+          {
+            "prefill_event_ms": 39.142398834228516,
+            "prefill_wall_ms": 39.23650799998768,
+            "decode_event_ms": 568.7193603515625,
+            "decode_wall_ms": 568.7636440000006
+          },
+          {
+            "prefill_event_ms": 33.69161605834961,
+            "prefill_wall_ms": 33.767898999997215,
+            "decode_event_ms": 548.6653442382812,
+            "decode_wall_ms": 548.7429319999819
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815545344,
+        "peak_allocated_bytes": 821660672,
+        "peak_reserved_bytes": 1302331392
+      }
+    },
+    {
+      "batch": 4,
+      "prompt_tokens": 512,
+      "input_sha256": "3415f3e996db92031a48a3894f7b224edeb16531ee5055ee6b326000837cb24a",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 179.5555877685547,
+            "prefill_wall_ms": 164.65934100000368,
+            "decode_event_ms": 558.0963745117188,
+            "decode_wall_ms": 511.76722299999255
+          },
+          {
+            "prefill_event_ms": 179.69760131835938,
+            "prefill_wall_ms": 164.80315300000825,
+            "decode_event_ms": 548.5987548828125,
+            "decode_wall_ms": 503.01819699998873
+          },
+          {
+            "prefill_event_ms": 179.5819549560547,
+            "prefill_wall_ms": 164.68269599999985,
+            "decode_event_ms": 566.01904296875,
+            "decode_wall_ms": 518.9881000000014
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 178.07769775390625,
+            "prefill_wall_ms": 163.30540199999177,
+            "decode_event_ms": 544.0060424804688,
+            "decode_wall_ms": 498.8901720000172
+          },
+          {
+            "prefill_event_ms": 178.1780548095703,
+            "prefill_wall_ms": 163.3968300000106,
+            "decode_event_ms": 538.5430908203125,
+            "decode_wall_ms": 493.79863199999363
+          },
+          {
+            "prefill_event_ms": 178.16876220703125,
+            "prefill_wall_ms": 163.38484500002437,
+            "decode_event_ms": 531.8489379882812,
+            "decode_wall_ms": 487.66645899999617
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 179.90757751464844,
+            "prefill_wall_ms": 164.97411900002135,
+            "decode_event_ms": 540.3256225585938,
+            "decode_wall_ms": 495.4312750000156
+          },
+          {
+            "prefill_event_ms": 179.52557373046875,
+            "prefill_wall_ms": 164.6204339999997,
+            "decode_event_ms": 534.8659057617188,
+            "decode_wall_ms": 490.45636300002116
+          },
+          {
+            "prefill_event_ms": 180.40013122558594,
+            "prefill_wall_ms": 165.4469749999805,
+            "decode_event_ms": 562.5333862304688,
+            "decode_wall_ms": 551.2511039999879
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 179.51840209960938,
+            "prefill_wall_ms": 179.6055229999638,
+            "decode_event_ms": 575.20947265625,
+            "decode_wall_ms": 575.4885169999966
+          },
+          {
+            "prefill_event_ms": 179.8236083984375,
+            "prefill_wall_ms": 174.03866600000129,
+            "decode_event_ms": 546.3265380859375,
+            "decode_wall_ms": 527.5453920000359
+          },
+          {
+            "prefill_event_ms": 357.1835021972656,
+            "prefill_wall_ms": 344.88176700000395,
+            "decode_event_ms": 532.5086059570312,
+            "decode_wall_ms": 514.2089789999886
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 366.7004089355469,
+            "prefill_wall_ms": 354.06688399996256,
+            "decode_event_ms": 548.6796875,
+            "decode_wall_ms": 529.8969300000067
+          },
+          {
+            "prefill_event_ms": 372.3302001953125,
+            "prefill_wall_ms": 359.4988290000174,
+            "decode_event_ms": 546.808837890625,
+            "decode_wall_ms": 528.0085979999853
+          },
+          {
+            "prefill_event_ms": 369.6739807128906,
+            "prefill_wall_ms": 356.9239610000068,
+            "decode_event_ms": 551.9573974609375,
+            "decode_wall_ms": 533.1048460000147
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815569408,
+        "peak_allocated_bytes": 1105766912,
+        "peak_reserved_bytes": 1319108608
+      }
+    },
+    {
+      "batch": 4,
+      "prompt_tokens": 32,
+      "input_sha256": "c09a71e9d8ee94b1828fe7a046aca35e413d1a101c638018b23d1d4dcebff64e",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 36.704158782958984,
+            "prefill_wall_ms": 35.47172999998338,
+            "decode_event_ms": 532.906982421875,
+            "decode_wall_ms": 514.534507999997
+          },
+          {
+            "prefill_event_ms": 33.89740753173828,
+            "prefill_wall_ms": 32.78486400000702,
+            "decode_event_ms": 538.6946411132812,
+            "decode_wall_ms": 520.1637640000172
+          },
+          {
+            "prefill_event_ms": 34.48729705810547,
+            "prefill_wall_ms": 33.399892000034015,
+            "decode_event_ms": 554.3106689453125,
+            "decode_wall_ms": 535.2047559999846
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 36.792320251464844,
+            "prefill_wall_ms": 35.551693999991585,
+            "decode_event_ms": 545.3250732421875,
+            "decode_wall_ms": 526.5554989999828
+          },
+          {
+            "prefill_event_ms": 36.88243103027344,
+            "prefill_wall_ms": 36.21598099999801,
+            "decode_event_ms": 540.6228637695312,
+            "decode_wall_ms": 538.9428589999739
+          },
+          {
+            "prefill_event_ms": 39.26937484741211,
+            "prefill_wall_ms": 38.933020999991186,
+            "decode_event_ms": 530.3521118164062,
+            "decode_wall_ms": 525.1255740000147
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 41.49657440185547,
+            "prefill_wall_ms": 41.15156900002148,
+            "decode_event_ms": 541.1092529296875,
+            "decode_wall_ms": 535.7700740000269
+          },
+          {
+            "prefill_event_ms": 37.26211166381836,
+            "prefill_wall_ms": 36.94720100003224,
+            "decode_event_ms": 534.1675415039062,
+            "decode_wall_ms": 528.9351590000138
+          },
+          {
+            "prefill_event_ms": 32.463871002197266,
+            "prefill_wall_ms": 32.21212299996523,
+            "decode_event_ms": 536.9149169921875,
+            "decode_wall_ms": 531.6428579999979
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 36.71449661254883,
+            "prefill_wall_ms": 36.42152800000531,
+            "decode_event_ms": 556.2777709960938,
+            "decode_wall_ms": 550.8004669999877
+          },
+          {
+            "prefill_event_ms": 36.46259307861328,
+            "prefill_wall_ms": 36.14132599994946,
+            "decode_event_ms": 530.130859375,
+            "decode_wall_ms": 524.9196809999717
+          },
+          {
+            "prefill_event_ms": 35.62700653076172,
+            "prefill_wall_ms": 35.3300319999903,
+            "decode_event_ms": 536.5698852539062,
+            "decode_wall_ms": 531.302654000001
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 37.958656311035156,
+            "prefill_wall_ms": 37.63828000001013,
+            "decode_event_ms": 523.9931030273438,
+            "decode_wall_ms": 518.7942439999915
+          },
+          {
+            "prefill_event_ms": 35.189632415771484,
+            "prefill_wall_ms": 34.911363999981404,
+            "decode_event_ms": 529.0547485351562,
+            "decode_wall_ms": 523.8586219999775
+          },
+          {
+            "prefill_event_ms": 34.87641525268555,
+            "prefill_wall_ms": 34.58146299999498,
+            "decode_event_ms": 544.6307983398438,
+            "decode_wall_ms": 539.259334999997
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815554048,
+        "peak_allocated_bytes": 840465920,
+        "peak_reserved_bytes": 1319108608
+      }
+    },
+    {
+      "batch": 4,
+      "prompt_tokens": 128,
+      "input_sha256": "3c8dbad7f2a8acaab0a897b9d47173d385243d7eee2dac70d1a6efedb4c4c280",
+      "rounds": [
+        [
+          {
+            "prefill_event_ms": 58.59241485595703,
+            "prefill_wall_ms": 58.068524000020716,
+            "decode_event_ms": 532.6858520507812,
+            "decode_wall_ms": 527.4892390000332
+          },
+          {
+            "prefill_event_ms": 61.152095794677734,
+            "prefill_wall_ms": 60.61352799997621,
+            "decode_event_ms": 537.8744506835938,
+            "decode_wall_ms": 533.7367459999882
+          },
+          {
+            "prefill_event_ms": 58.38643264770508,
+            "prefill_wall_ms": 58.10635000000275,
+            "decode_event_ms": 538.4468383789062,
+            "decode_wall_ms": 535.1414819999718
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 58.17136001586914,
+            "prefill_wall_ms": 57.859842999960165,
+            "decode_event_ms": 524.885986328125,
+            "decode_wall_ms": 521.6666379999992
+          },
+          {
+            "prefill_event_ms": 59.39712142944336,
+            "prefill_wall_ms": 59.08911500000613,
+            "decode_event_ms": 531.0924682617188,
+            "decode_wall_ms": 527.8685160000123
+          },
+          {
+            "prefill_event_ms": 62.090240478515625,
+            "prefill_wall_ms": 61.80042900001581,
+            "decode_event_ms": 531.9280395507812,
+            "decode_wall_ms": 528.7416890000145
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 60.92982482910156,
+            "prefill_wall_ms": 60.60356399996181,
+            "decode_event_ms": 536.4715576171875,
+            "decode_wall_ms": 533.1828340000015
+          },
+          {
+            "prefill_event_ms": 84.28441619873047,
+            "prefill_wall_ms": 83.82071200003338,
+            "decode_event_ms": 535.4679565429688,
+            "decode_wall_ms": 532.2764120000443
+          },
+          {
+            "prefill_event_ms": 61.14495849609375,
+            "prefill_wall_ms": 60.81163799996148,
+            "decode_event_ms": 531.3648681640625,
+            "decode_wall_ms": 528.1029350000495
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 60.74265670776367,
+            "prefill_wall_ms": 60.410002000026,
+            "decode_event_ms": 530.1043090820312,
+            "decode_wall_ms": 526.8605450000337
+          },
+          {
+            "prefill_event_ms": 61.857791900634766,
+            "prefill_wall_ms": 61.54145599998628,
+            "decode_event_ms": 528.3870849609375,
+            "decode_wall_ms": 525.177541000005
+          },
+          {
+            "prefill_event_ms": 60.18048095703125,
+            "prefill_wall_ms": 59.88872599999695,
+            "decode_event_ms": 533.6432495117188,
+            "decode_wall_ms": 530.3935089999641
+          }
+        ],
+        [
+          {
+            "prefill_event_ms": 77.41840362548828,
+            "prefill_wall_ms": 77.00830799996083,
+            "decode_event_ms": 561.3157348632812,
+            "decode_wall_ms": 557.9554180000059
+          },
+          {
+            "prefill_event_ms": 62.83776092529297,
+            "prefill_wall_ms": 62.514664999980596,
+            "decode_event_ms": 549.3770141601562,
+            "decode_wall_ms": 546.0873529999617
+          },
+          {
+            "prefill_event_ms": 58.83571243286133,
+            "prefill_wall_ms": 58.55699800002867,
+            "decode_event_ms": 548.220947265625,
+            "decode_wall_ms": 544.1304800000353
+          }
+        ]
+      ],
+      "memory": {
+        "allocated_bytes": 815557120,
+        "peak_allocated_bytes": 890466304,
+        "peak_reserved_bytes": 1319108608
+      }
+    }
+  ],
+  "telemetry": [
+    {
+      "label": "start",
+      "utc": "2026-11-08T04:55:56.232939+00:00",
+      "command": [
+        "nvidia-smi"
+      ],
+      "returncode": 0,
+      "stdout": "Sat Nov  7 23:55:56 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 595.66                 Driver Version: 596.08         CUDA Version: 13.2     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060 ...    On  |   00000000:01:00.0 Off |                  N/A |\n| N/A   69C    P0             16W /  115W |    1269MiB /   6144MiB |     41%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             382      C   /python3.10                           N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+      "stderr": ""
+    },
+    {
+      "label": "B1_L128",
+      "utc": "2026-11-08T04:56:08.321006+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 72, P0, 1410 MHz, 7001 MHz, 32.91 W, 1339 MiB, 36 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "B1_L512",
+      "utc": "2026-11-08T04:56:19.672367+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 75, P0, 1950 MHz, 7001 MHz, 56.16 W, 1383 MiB, 29 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "B1_L32",
+      "utc": "2026-11-08T04:56:31.761058+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 69, P0, 1260 MHz, 7001 MHz, 29.43 W, 1383 MiB, 39 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "B4_L512",
+      "utc": "2026-11-08T04:56:45.196277+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 70, P3, 1732 MHz, 6001 MHz, 43.94 W, 1399 MiB, 39 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "B4_L32",
+      "utc": "2026-11-08T04:56:54.845848+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 68, P3, 1545 MHz, 6001 MHz, 33.22 W, 1399 MiB, 36 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "B4_L128",
+      "utc": "2026-11-08T04:57:06.015369+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 70, P3, 1807 MHz, 6001 MHz, 41.54 W, 1399 MiB, 33 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "end",
+      "utc": "2026-11-08T04:57:06.058315+00:00",
+      "command": [
+        "nvidia-smi"
+      ],
+      "returncode": 0,
+      "stdout": "Sat Nov  7 23:57:06 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 595.66                 Driver Version: 596.08         CUDA Version: 13.2     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 3060 ...    On  |   00000000:01:00.0 Off |                  N/A |\n| N/A   70C    P3             41W /   45W |    1399MiB /   6144MiB |     33%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|    0   N/A  N/A             382      C   /python3.10                           N/A      |\n+-----------------------------------------------------------------------------------------+\n",
+      "stderr": ""
+    }
+  ],
+  "status": "PASS",
+  "quantized_sha256": "4bc3aae51d883b3402fe789ac778c139a6f3a2ded05e93a7e0508bc108cec191",
+  "kernel_sha256": "72932d07630869416d679b8d591db526dfc0fb7df3e921d8665f99ef52caa6d1",
+  "resident_model_bytes": 803995904,
+  "reduction_restored": true
+}

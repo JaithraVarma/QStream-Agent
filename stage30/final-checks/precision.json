@@ -1,0 +1,450 @@
+{
+  "status": "PASS",
+  "gpu": "NVIDIA GeForce RTX 3060 Laptop GPU",
+  "kernel_sha256": "72932d07630869416d679b8d591db526dfc0fb7df3e921d8665f99ef52caa6d1",
+  "configuration": [
+    32,
+    64,
+    4,
+    2
+  ],
+  "telemetry": [
+    {
+      "label": "start",
+      "utc": "2026-11-10T02:04:09.173430+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 52, P8, 210 MHz, 405 MHz, 10.98 W, 0 MiB, 0 %\n",
+      "stderr": ""
+    },
+    {
+      "label": "end",
+      "utc": "2026-11-10T02:05:13.623470+00:00",
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,driver_version,temperature.gpu,pstate,clocks.current.sm,clocks.current.memory,power.draw,memory.used,utilization.gpu",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, driver_version, temperature.gpu, pstate, clocks.current.sm [MHz], clocks.current.memory [MHz], power.draw [W], memory.used [MiB], utilization.gpu [%]\nNVIDIA GeForce RTX 3060 Laptop GPU, 596.08, 62, P0, 1987 MHz, 7001 MHz, 61.88 W, 1597 MiB, 56 %\n",
+      "stderr": ""
+    }
+  ],
+  "quantized_sha256": "4bc3aae51d883b3402fe789ac778c139a6f3a2ded05e93a7e0508bc108cec191",
+  "memory": {
+    "fp16": {
+      "model_storage_bytes": 1192100096,
+      "cases": {
+        "128": {
+          "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+          "allocated_bytes": 1234498048,
+          "peak_allocated_bytes": 1238006272,
+          "peak_reserved_bytes": 1287651328
+        },
+        "512": {
+          "input_sha256": "4a611661fe868e771680ec47f0ef29a8c3ab4d04bb4206185a657de7f6687298",
+          "allocated_bytes": 1305807360,
+          "peak_allocated_bytes": 1320724992,
+          "peak_reserved_bytes": 1396703232
+        }
+      }
+    },
+    "kimi_int4": {
+      "model_storage_bytes": 803995904,
+      "cases": {
+        "128": {
+          "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+          "allocated_bytes": 898958336,
+          "peak_allocated_bytes": 902466560,
+          "peak_reserved_bytes": 1461714944
+        },
+        "512": {
+          "input_sha256": "4a611661fe868e771680ec47f0ef29a8c3ab4d04bb4206185a657de7f6687298",
+          "allocated_bytes": 979901440,
+          "peak_allocated_bytes": 994130944,
+          "peak_reserved_bytes": 1488977920
+        }
+      }
+    }
+  },
+  "timing": [
+    {
+      "prompt_tokens": 128,
+      "input_sha256": "d5e9f6904b0600e970e65147c496c17886b6921ce3865444ae6e121e5983b311",
+      "medians_ms_per_step": {
+        "fp16": {
+          "event_ms": 7.33125901222229,
+          "wall_ms": 7.339806875052091
+        },
+        "kimi_int4": {
+          "event_ms": 7.130390882492065,
+          "wall_ms": 7.137248312517386
+        }
+      },
+      "int4_vs_fp16": {
+        "wall_change_pct": -2.7646515044507325,
+        "trial_wins": 10
+      },
+      "samples": [
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 117.03910064697266,
+              "wall_ms": 117.12399799944251
+            },
+            "kimi_int4": {
+              "event_ms": 113.728515625,
+              "wall_ms": 113.88013499890803
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 113.83602905273438,
+              "wall_ms": 113.92530999910377
+            },
+            "fp16": {
+              "event_ms": 117.08195495605469,
+              "wall_ms": 117.16311900090659
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 114.0664291381836,
+              "wall_ms": 114.17807200086827
+            },
+            "fp16": {
+              "event_ms": 117.3022689819336,
+              "wall_ms": 117.4258330011071
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 117.40262603759766,
+              "wall_ms": 117.50978000054602
+            },
+            "kimi_int4": {
+              "event_ms": 114.16268920898438,
+              "wall_ms": 114.2399390009814
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 114.11660766601562,
+              "wall_ms": 114.18490100004419
+            },
+            "fp16": {
+              "event_ms": 117.36870574951172,
+              "wall_ms": 117.48786199859751
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 117.29100799560547,
+              "wall_ms": 117.5202550002723
+            },
+            "kimi_int4": {
+              "event_ms": 114.08998107910156,
+              "wall_ms": 114.20704500051215
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 117.29801940917969,
+              "wall_ms": 117.41341600099986
+            },
+            "kimi_int4": {
+              "event_ms": 114.08252716064453,
+              "wall_ms": 114.22329400011222
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 117.2807388305664,
+              "wall_ms": 117.41002199960349
+            },
+            "kimi_int4": {
+              "event_ms": 114.07154846191406,
+              "wall_ms": 114.18307299936714
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 114.18316650390625,
+              "wall_ms": 114.30599899904337
+            },
+            "fp16": {
+              "event_ms": 117.3196792602539,
+              "wall_ms": 117.4479870005598
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 114.18112182617188,
+              "wall_ms": 114.30987200037634
+            },
+            "fp16": {
+              "event_ms": 117.34220886230469,
+              "wall_ms": 117.47067299984337
+            }
+          }
+        }
+      ],
+      "graph_vs_own_eager_max_relative_l2": {
+        "fp16": 0.0,
+        "kimi_int4": 0.0
+      },
+      "int4_vs_fp16_logit_top1": 17,
+      "logits_compared": 17,
+      "int4_vs_fp16_max_relative_l2": 0.39419740438461304
+    },
+    {
+      "prompt_tokens": 512,
+      "input_sha256": "4a611661fe868e771680ec47f0ef29a8c3ab4d04bb4206185a657de7f6687298",
+      "medians_ms_per_step": {
+        "fp16": {
+          "event_ms": 8.50710391998291,
+          "wall_ms": 8.51889531247707
+        },
+        "kimi_int4": {
+          "event_ms": 8.43778371810913,
+          "wall_ms": 8.448667593825121
+        }
+      },
+      "int4_vs_fp16": {
+        "wall_change_pct": -0.8682615608401223,
+        "trial_wins": 10
+      },
+      "samples": [
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 135.1874542236328,
+              "wall_ms": 135.37594199988234
+            },
+            "fp16": {
+              "event_ms": 136.121337890625,
+              "wall_ms": 136.2840279998636
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 135.0172119140625,
+              "wall_ms": 135.22325600024487
+            },
+            "fp16": {
+              "event_ms": 136.27381896972656,
+              "wall_ms": 136.52987100067548
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 136.07321166992188,
+              "wall_ms": 136.24839200019778
+            },
+            "kimi_int4": {
+              "event_ms": 135.19667053222656,
+              "wall_ms": 135.36675200157333
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 136.11109924316406,
+              "wall_ms": 136.3960369999404
+            },
+            "kimi_int4": {
+              "event_ms": 135.06640625,
+              "wall_ms": 135.2125250014069
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 133.91049194335938,
+              "wall_ms": 134.05626299936557
+            },
+            "fp16": {
+              "event_ms": 136.10671997070312,
+              "wall_ms": 136.30089000071166
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 134.9918670654297,
+              "wall_ms": 135.12577699839312
+            },
+            "fp16": {
+              "event_ms": 136.28416442871094,
+              "wall_ms": 136.64915499975905
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 136.0773162841797,
+              "wall_ms": 136.22091400065983
+            },
+            "kimi_int4": {
+              "event_ms": 135.42092895507812,
+              "wall_ms": 135.63953199991374
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 136.09266662597656,
+              "wall_ms": 136.2230560007447
+            },
+            "kimi_int4": {
+              "event_ms": 134.92601013183594,
+              "wall_ms": 135.14483800099697
+            }
+          }
+        },
+        {
+          "order": [
+            "fp16",
+            "kimi_int4"
+          ],
+          "samples": {
+            "fp16": {
+              "event_ms": 136.13568115234375,
+              "wall_ms": 136.34197499959555
+            },
+            "kimi_int4": {
+              "event_ms": 134.92620849609375,
+              "wall_ms": 135.0970680014143
+            }
+          }
+        },
+        {
+          "order": [
+            "kimi_int4",
+            "fp16"
+          ],
+          "samples": {
+            "kimi_int4": {
+              "event_ms": 134.97235107421875,
+              "wall_ms": 135.1195249990269
+            },
+            "fp16": {
+              "event_ms": 136.11622619628906,
+              "wall_ms": 136.3037599985546
+            }
+          }
+        }
+      ],
+      "graph_vs_own_eager_max_relative_l2": {
+        "fp16": 0.0,
+        "kimi_int4": 0.0
+      },
+      "int4_vs_fp16_logit_top1": 17,
+      "logits_compared": 17,
+      "int4_vs_fp16_max_relative_l2": 0.3951101303100586
+    }
+  ]
+}

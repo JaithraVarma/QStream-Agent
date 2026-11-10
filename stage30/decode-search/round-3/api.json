@@ -1,0 +1,15 @@
+{
+  "status": "invalid_proposal",
+  "request_id": "00ab151b-6824-495e-b68c-f2ea725182df",
+  "client_seconds": 43.27658791900012,
+  "usage": {
+    "prompt_tokens": 1108,
+    "completion_tokens": 8192,
+    "total_tokens": 9300,
+    "prompt_tokens_details": {
+      "cached_tokens": 512
+    }
+  },
+  "finish_reason": "length",
+  "completion_tokens_per_client_second": 189.29403619649483
+}
